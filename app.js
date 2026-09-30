@@ -158,8 +158,8 @@ const products = [
   },
   {
     id: 2,
-    name: "Floral Two-Piece Set",
-    description: "A vibrant floral two-piece outfit for a bold, confident look.",
+    name: "Two-Piece Set",
+    description: "A vibrant  two-piece outfit for a bold, confident look.",
     price: 45000,
     category: "two-piece",
     gender: "Women",
@@ -242,7 +242,7 @@ const products = [
     name: "Shorts",
     description: "Comfortable shorts for relaxed everyday style",
     price: 10000,
-    category: "other",
+    category: "shorts",
     gender: "Men",
     image:
       "assets/greyshort.jpg",
@@ -1038,7 +1038,7 @@ if (typeof window !== "undefined") {
       <nav class="navbar" id="navbar">
         <div class="navbar-inner">
           <div class="navbar-logo" data-route="home">
-            Elvis's <span>Elegant</span> Closet
+            Elvis' <span>Elegant</span> Closet
           </div>
           <div class="navbar-links">
             ${navLinks
