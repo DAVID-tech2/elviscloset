@@ -31,7 +31,7 @@ const businessConfig = {
   // --- Social media ---
   // Leave as "PLACEHOLDER_URL" to hide a button automatically.
   social: {
-    tiktok: "https://wwww.tiktok.com/@elvis.elegantcloset",
+    tiktok: "https://www.tiktok.com/@elvis.elegantcloset",
     instagram: "PLACEHOLDER_URL",
     facebook: "PLACEHOLDER_URL",
   },
