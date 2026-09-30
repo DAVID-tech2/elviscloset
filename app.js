@@ -971,6 +971,9 @@ if (typeof window !== "undefined") {
      shopState.gender = params.gender ;
     }
     renderPage();
+    if (route === "home") {
+      attachProductCardListeners();
+    }
     window.scrollTo({top:0,behavior:"instant"});
     updateNavActive()
   }
