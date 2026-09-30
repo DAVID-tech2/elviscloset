@@ -2273,11 +2273,37 @@ if (typeof window !== "undefined") {
     // Get page reference now that shell HTML exists
     pageEl = document.getElementById("page");
 
+    if (!history.state || !history.state.route) {
+  history.replaceState(
+    {
+      route: currentRoute,
+      params: {}
+    },
+    "",
+    window.location.href
+  );
+}
     // Render initial page
     renderPage();
 
     // Attach global listeners
     attachNavigationListeners();
+
+    // Handle the phone/browser Back and Forward buttons
+window.addEventListener("popstate", function (event) {
+  if (event.state && event.state.route) {
+    navigate(
+      event.state.route,
+      event.state.params || {},
+      true
+    );
+
+    if (event.state.route === "shop") attachShopListeners();
+    if (event.state.route === "product") attachProductDetailListeners();
+    if (event.state.route === "cart") attachCartListeners();
+    if (event.state.route === "contact") attachContactListeners();
+  }
+});
 
     // Attach page-specific listeners
     attachProductCardListeners();
