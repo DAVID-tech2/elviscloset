@@ -949,6 +949,32 @@ if (typeof window !== "undefined") {
     updateNavActive();
   }
 
+  // function navigate(route,params,fromHistory){
+  //   params = params || {};
+  //   closeMobileMenu();
+  //   if (!fromHistory) {
+  //     const state = {route:route,
+  //       params:params
+  //     };
+  //     history.pushState(state,"",window.location.href);
+  //   }
+  //   currentRoute = route;
+  //   if (params.productId) {
+  //     currentProductId = params.productId;
+  //   }
+
+  //   if (params.category) {
+  //     shopState.category = params.category;
+  //   }
+
+  //   if (params.gender) {
+  //    shopState.gender = params.gender ;
+  //   }
+  //   renderPage();
+  //   window.scrollTo({top:0,behavior:"instant"});
+  //   updateNavActive()
+  // }
+
   function updateNavActive() {
     document.querySelectorAll(".navbar-link, .mobile-menu-link").forEach((link) => {
       link.classList.toggle("active", link.dataset.route === currentRoute);
