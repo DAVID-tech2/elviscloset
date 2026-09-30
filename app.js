@@ -99,7 +99,7 @@ const categories = [
       "assets/greyjamp.jpg",
   },
   {
-    id: "gentles",
+    id: "trousers",
     name: "Gentle Pants",
     description: "Gentles to complete your look.",
     gender: "Unisex",
@@ -963,6 +963,12 @@ if (typeof window !== "undefined") {
       currentProductId = params.productId;
     }
 
+    if(route==="shop" && ! params.category && ! params.gender){
+      shopState.category = "all";
+      shopState.gender = "all";
+      shopState.search = "";
+    }
+
     if (params.category) {
       shopState.category = params.category;
     }
@@ -1092,7 +1098,7 @@ if (typeof window !== "undefined") {
         <div class="container">
           <div class="footer-grid">
             <div class="footer-brand">
-              <h3>Elvis's <span>Elegant</span> Closet</h3>
+              <h3>Elvis' <span>Elegant</span> Closet</h3>
               <p>${escapeHtml(cfg.description)}</p>
             </div>
             <div class="footer-col">
