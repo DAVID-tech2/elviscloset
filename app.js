@@ -8,7 +8,7 @@
 // =============================================================
 
 const businessConfig = {
-  name: "Elvis's Elegant Closet",
+  name: "Elvis' Elegant Closet",
   tagline: "Style That Speaks For You",
   description:
     "A fashion retail brand focused on bringing stylish clothing and accessories closer to modern customers.",
